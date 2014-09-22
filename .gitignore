@@ -7,4 +7,8 @@ node_modules
 # Compiled & compressed files ( production ready )
 cloud
 config
+<<<<<<< HEAD
 .idea
+=======
+CHNotg 2.esproj
+>>>>>>> FETCH_HEAD

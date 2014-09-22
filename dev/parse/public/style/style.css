@@ -279,10 +279,17 @@ p.clear {
 }
 
 .final_menu {
+<<<<<<< HEAD
     min-height: 200px;
     height: 350px;
     max-height: auto;
     overflow-y: scroll;
+=======
+/*	min-height: 200px;
+	height: 350px; 
+	max-height: auto;
+	overflow-y: scroll;*/
+>>>>>>> FETCH_HEAD
 }
 
 .final_menu li {
@@ -852,4 +859,48 @@ ol .illustration, ul .illustration {
 }
 /*
 END image definitons
+*/
+
+
+/*
+BEGIN glyphicon definitons
+*/
+.glyphicon {
+	padding-left: 32px;
+}
+
+.check {
+	background: url('../assets/icons/glyphicons/glyphicons_152_check.png') no-repeat 9px 8px;
+	background-size: 14px 12px;
+}
+.clock {
+	background: url('../assets/icons/glyphicons/glyphicons_054_clock.png') no-repeat 9px 8px;
+	background-size: 12px 12px;
+}
+.cutlery {
+	background: url('../assets/icons/glyphicons/glyphicons_276_cutlery.png') no-repeat 9px 8px;
+	background-size: 8px 12px;
+}
+.eye_open {
+	background: url('../assets/icons/glyphicons/glyphicons_051_eye_open.png') no-repeat 5px 8px;
+	background-size: 20px 12px;
+}
+.heart {
+	background: url('../assets/icons/glyphicons/glyphicons_012_heart.png') no-repeat 9px 8px;
+	background-size: 12px 12px;
+}
+.smoking {
+	background: url('../assets/icons/glyphicons/glyphicons_362_smoking.png') no-repeat 9px 8px;
+	background-size: 14px 12px;
+}
+.stroller {
+	background: url('../assets/icons/glyphicons/glyphicons_075_stroller.png') no-repeat 9px 8px;
+	background-size: 13px 12px;
+}
+.warning {
+	background: url('../assets/icons/glyphicons/glyphicons_078_warning_sign.png') no-repeat 9px 8px;
+	background-size: 13px 12px;
+}
+/*
+END icon definitons
 */

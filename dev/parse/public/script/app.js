@@ -111,6 +111,9 @@
             //lets call the navigation view initializer on application start
             App.navigationView();
 
+            //lets call modal view event delegation on app start
+            App.modalView();
+
             //lets call the pop manager on application start
             App.back();
 
@@ -157,6 +160,16 @@
         }
     };
 
+    //function to show and load content into a modal dialog
+    App.modalView = function () {
+        $(document).delegate('.modal-view', App.CURRENT_EVENT, function (e) {
+            e.preventDefault();
+            // var _view = $(this).data('view');
+            var _modal = $("script.modal-view").html();
+            $('body').prepend(_modal);
+        });
+    };
+
     //function for loading and animation navigation views
     App.navigationView = function () {
 
@@ -168,14 +181,13 @@
             e.preventDefault();
             var _view = $(this).data('view');
             var _title = $(this).data('title');
-            var _type = $(this).data('type');
+            /*   var _type = $(this).data('type');
+             if (typeof _type === 'undefined' || _type === '') {
+             _type = 'center-view';
+             }*/
             if (typeof _title === 'undefined' || _title === '') {
                 _title = 'CHN On the Go';
             }
-            if (typeof _type === 'undefined' || _type === '') {
-                _type = 'center-view';
-            }
-            console.log(_type);
             var temp_id = "view" + App.createHash();
             var _id = App.HASH_TAG + temp_id;
             if (typeof _view === 'undefined') {
@@ -195,7 +207,7 @@
                         id: temp_id,
                         index: App.Z_INDEX++
                     };
-                    var temp = _.template($("script." + _type).html(), _json);
+                    var temp = _.template($("script.fullscreen-view").html(), _json);
                     $(App.EL).append(temp);
                     App.VIEW_MANAGER.push(_id);
                     App.clearViews();

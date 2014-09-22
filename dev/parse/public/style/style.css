@@ -1,3 +1,12 @@
+/*
+Major COLORS used
+
+#53AB1F — deep green
+#6E5747 — dark brown
+#D5D3C4 — light brown
+
+*/
+
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
 
@@ -171,6 +180,7 @@ p.clear {
 	width: 95%;
 }
 
+
 /* 
 BEGIN menu icons 
 */
@@ -222,6 +232,7 @@ BEGIN menu icons
 /* 
 END menu icons 
 */
+
 
 .main_menu li:hover, .sub_menu li:hover, .final_menu li:hover {
 	background: linear-gradient(#E5E3DA, #DBD9CB);
@@ -345,7 +356,6 @@ li.triage_no {
 
 .sticky {
 	width: 320px;
-	/*position: absolute;*/
 	margin: 15px auto 130px;
 	/*bottom: 100px;*/
 	display: block;
@@ -355,7 +365,6 @@ fieldset {
     border: dashed #53AB1F 1px;
     padding: 10px;
     margin-bottom: 25px;
-    /*position: relative;*/
 }
 
 legend {
@@ -384,7 +393,6 @@ ul.action_list li {
 .modal_link {
 	padding: 4px 7px;
 	margin: 0 3px;
-	/*position: relative;*/
 	display: inline-block;
 	background-color: #FFF;
 	border: 1px dotted #53AB1F;
@@ -399,23 +407,18 @@ ul.action_list li {
 }
 
 ol {
-    counter-reset:li; /* Initiate a counter */
-    margin-left:0; /* Remove the default left margin */
-    padding-left:0; /* Remove the default left padding */
-    /*list-style-position: inside;*/
+    counter-reset:li;
+    margin-left:0;
+    padding-left:0;
 }
 
 ol > li {
-    position:relative; /* Create a positioning context */
-    /*margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers *!/*/
-    /*padding:4px 8px; /* Add some spacing around the content *!/*/
-    /*list-style:none; /* Disable the normal item numbering *!/*/
+    position:relative;
 }
 
 ol > li:before {
-    content:counter(li); /* Use the counter as content */
-    counter-increment:li; /* Increment the counter by 1 */
-    /* Position and style the number */
+    content:counter(li);
+    counter-increment:li;
     position: absolute;
     top: 0;
     left: -5px;
@@ -423,21 +426,11 @@ ol > li:before {
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
     width: 43px;
-    /* Some space between the number and the content in browsers that support
-       generated content but not positioning it (Camino 2 is one example) */
-    /*margin-right: 8px;*/
     padding: 9px;
-    /*border-top:2px solid #666;*/
     color: #DDDBCF;
     font-size: 1.5em;
-    /*background:#F7F7F4;*/
-    /*font-weight:bold;*/
-    /*font-family:"Helvetica Neue", Arial, sans-serif;*/
     text-align:center;
 }
-/*li ol,*/
-/*li ul {margin-top:6px;}*/
-/*ol li:last-child {margin-bottom:10px;}*/
 
 .toolbox {
 	margin: 30px auto;
@@ -556,11 +549,9 @@ BEGIN image definitons
 	/*display: block;*/
 	background: no-repeat left top;
 }
-
 ol .illustration, ul .illustration {
 	margin: 0;
 }
-
 .illustration_float {
 	/*display: block;*/
 	float: left;

@@ -9,17 +9,10 @@
 <!-- modal view template -->
 <script class="modal-view" type="text/template">
     <div class="modal">
-        <br>
-        <br>
-
-        <div class="modal_content">
-            <div class="modal_close"></div>
-            <div class="modal-outer">
-                <div class="modal-middle">
-                    <div class="modal-inner">
-                        {{= template }}
-                    </div>
-                </div>
+        <div style="position: relative">
+            <div class="modal_content" style="display: none">
+                <div class="modal_close"></div>
+                {{= template }}
             </div>
         </div>
     </div>

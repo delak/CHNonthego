@@ -181,30 +181,20 @@ p.clear {
     z-index: 999999999;
 }
 
-
-
-.modal-outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    z-index: 999;
-}
-
-.modal-middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.modal-inner {
-    margin-left: auto;
-    margin-right: auto;
-    width: 320px;
-    position: relative;
+.modal_content{
     background-color: #fff;
     box-shadow: 0 2px 12px 0 #6b6767;
     border-radius: 4px;
+    margin: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+}
+
+.modal_content img{
+    display: block;
+    margin: 0 auto;
 }
 
 .modal_close{

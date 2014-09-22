@@ -178,6 +178,8 @@
             e.preventDefault();
             var _view = $(this).data('view');
             var _type = $(this).data('type');
+            //  $.facebox({ ajax:'templates/'+ _view });
+
             var _template = ['script/text!templates/' + _view];
             if (typeof _view === 'undefined') {
                 alert("Error Loading Modal");
@@ -191,8 +193,14 @@
                     };
                     var temp = _.template($("script.modal-view").html(), _json);
                     $('body').append(temp);
-                    var info = $('modal').find('.modal_info').next();
-                    console.log($(info).height());
+                    var content = '.modal_content';
+                    console.log($(window).height());
+                    window.setTimeout(function(){
+                        console.log($(content).height());
+                        $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).fadeIn();
+                    },100)
+
+
                 });
             }
         });

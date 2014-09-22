@@ -81,6 +81,13 @@
     // the view stack index
     App.Z_INDEX = 0;
 
+    //override underscore template tags
+    _.templateSettings = {
+        evaluate: /\{\{(.+?)\}\}/g,
+        interpolate: /\{\{=(.+?)\}\}/g,
+        escape: /\{\{-(.+?)\}\}/g
+    };
+
 
     App.init = function () {
 
@@ -110,6 +117,9 @@
 
             //lets call the navigation view initializer on application start
             App.navigationView();
+
+            //lets call modal view event delegation on app start
+            App.modalView();
 
             //lets call the pop manager on application start
             App.back();
@@ -157,6 +167,45 @@
         }
     };
 
+    //function to show and load content into a modal dialog
+    App.modalView = function () {
+
+        //look for all class names with the name navigation-view
+        //attach an event to them
+        //extract the data object
+        $(document).delegate('.modal-view', App.CURRENT_EVENT, function (e) {
+
+            e.preventDefault();
+            var _view = $(this).data('view');
+            var _type = $(this).data('type');
+            //  $.facebox({ ajax:'templates/'+ _view });
+
+            var _template = ['script/text!templates/' + _view];
+            if (typeof _view === 'undefined') {
+                alert("Error Loading Modal");
+            } else {
+                if (typeof _type !== 'undefined' && typeof _type === 'image') {
+                    _template = ['script/text!' + _view];
+                }
+                require(_template, function (template) {
+                    var _json = {
+                        template: template
+                    };
+                    var temp = _.template($("script.modal-view").html(), _json);
+                    $('body').append(temp);
+                    var content = '.modal_content';
+                    console.log($(window).height());
+                    window.setTimeout(function(){
+                        console.log($(content).height());
+                        $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).fadeIn();
+                    },100)
+
+
+                });
+            }
+        });
+    };
+
     //function for loading and animation navigation views
     App.navigationView = function () {
 
@@ -167,15 +216,6 @@
 
             e.preventDefault();
             var _view = $(this).data('view');
-            var _title = $(this).data('title');
-            var _type = $(this).data('type');
-            if (typeof _title === 'undefined' || _title === '') {
-                _title = 'CHN On the Go';
-            }
-            if (typeof _type === 'undefined' || _type === '') {
-                _type = 'center-view';
-            }
-            console.log(_type);
             var temp_id = "view" + App.createHash();
             var _id = App.HASH_TAG + temp_id;
             if (typeof _view === 'undefined') {
@@ -183,19 +223,13 @@
             } else {
                 require(['script/text!templates/' + _view], function (template) {
 
-                    _.templateSettings = {
-                        evaluate: /\{\{(.+?)\}\}/g,
-                        interpolate: /\{\{=(.+?)\}\}/g,
-                        escape: /\{\{-(.+?)\}\}/g
-                    };
 
                     var _json = {
-                        title: _title,
                         template: template,
                         id: temp_id,
                         index: App.Z_INDEX++
                     };
-                    var temp = _.template($("script." + _type).html(), _json);
+                    var temp = _.template($("script.fullscreen-view").html(), _json);
                     $(App.EL).append(temp);
                     App.VIEW_MANAGER.push(_id);
                     App.clearViews();

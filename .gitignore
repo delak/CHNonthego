@@ -7,4 +7,6 @@ node_modules
 # Compiled & compressed files ( production ready )
 cloud
 config
+.idea
 CHNotg 2.esproj
+

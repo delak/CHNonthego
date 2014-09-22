@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    font-size: 12pt;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+form,
+input {
+    max-width: 90%;
+    width: 370px;
+    margin: 0 auto 10px auto;
+}
+
+h1, h2, h3, h4, h5, h6,a {
+    font-family: "Roboto", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #222;
+    text-rendering: optimizeLegibility;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+h1 {
+    padding: 0;
+    font-size: 18pt;
+    color: #000;
+    text-align: center;
+    font-weight: 300;
+}
+
+h2 {
+    padding: 0;
+    font-size: 16pt;
+    color: #000;
+    text-align: center;
+    font-weight: 300;
+}
+
+h3 {
+    padding: 0;
+    font-size: 14pt;
+    color: #000;
+    text-align: center;
+    font-weight: 300;
+}
+
+h4 {
+    padding: 0;
+    font-size: 12pt;
+    color: #000;
+    text-align: center;
+    font-weight: 300;
+}
+
+h5 {
+    padding: 0;
+    font-size: 10pt;
+    color: #000;
+    text-align: center;
+    font-weight: 300;
+}
+
+h6 {
+    padding: 0;
+    font-size: 8pt;
+    color: #000;
+    text-align: center;
+    font-weight: 300;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+    -webkit-appearance: none;
+    background-color: #fff;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    height: 2.09rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: box-shadow 0.45s, border-color 0.45s ease-in-out
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
+    box-shadow: 0 0 5px #999;
+    border-color: #999
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
+    background: #fafafa;
+    border-color: #999;
+    outline: none
+}
+
+input[type="text"][disabled], fieldset[disabled] input[type="text"], input[type="password"][disabled], fieldset[disabled] input[type="password"], input[type="date"][disabled], fieldset[disabled] input[type="date"], input[type="datetime"][disabled], fieldset[disabled] input[type="datetime"], input[type="datetime-local"][disabled], fieldset[disabled] input[type="datetime-local"], input[type="month"][disabled], fieldset[disabled] input[type="month"], input[type="week"][disabled], fieldset[disabled] input[type="week"], input[type="email"][disabled], fieldset[disabled] input[type="email"], input[type="number"][disabled], fieldset[disabled] input[type="number"], input[type="search"][disabled], fieldset[disabled] input[type="search"], input[type="tel"][disabled], fieldset[disabled] input[type="tel"], input[type="time"][disabled], fieldset[disabled] input[type="time"], input[type="url"][disabled], fieldset[disabled] input[type="url"], textarea[disabled], fieldset[disabled] textarea {
+    background-color: #ddd
+}
+
+input[type="text"].radius, input[type="password"].radius, input[type="date"].radius, input[type="datetime"].radius, input[type="datetime-local"].radius, input[type="month"].radius, input[type="week"].radius, input[type="email"].radius, input[type="number"].radius, input[type="search"].radius, input[type="tel"].radius, input[type="time"].radius, input[type="url"].radius, textarea.radius {
+    border-radius: 3px
+}
+
+input[type="submit"] {
+    -webkit-appearance: none
+}
+
+fieldset {
+    border: dashed #d1d3d4 1px;
+    padding: 10px;
+    position: relative;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    position: relative;
+}
+
+.canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #fff;
+    z-index: 0;
+}
+
+p {
+    font-size: 15px !important;
+}
+
+.height-135 {
+    height: 135px;
+}
+
+.height-350 {
+    height: 350px;
+}
+
+.background-image {
+    z-index: -999;
+    min-height: 100%;
+    min-width: 1024px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.max-width-none {
+    max-width: none;
+}
+
+.min-width-percent-100 {
+    min-width: 100% !important;
+}
+
+.padding-00-important {
+    padding: 0 !important;
+}
+
+.margin-00-important {
+    margin: 0 !important;
+}
+
+.columns-padding-right {
+    padding-right: 0.6rem;
+}
+
+.columns-padding-left {
+    padding-left: 0.6rem;
+}
+
+.border-color-black {
+    border-color: #000;
+}
+
+.right-01 {
+    right: 1px;
+}
+
+.right-02 {
+    right: 2px;
+}
+
+.right-03 {
+    right: 3px;
+}
+
+.top-40 {
+    top: 40px;
+}
+
+.top-30 {
+    top: 30px;
+}
+
+.top-20 {
+    top: 20px;
+}
+
+.top-10 {
+    top: 10px;
+}
+
+.bottom-120 {
+    bottom: 120px;
+}
+
+.bottom-110 {
+    bottom: 110px;
+}
+
+.line-height-11 {
+    line-height: 11px;
+}
+
+.line-height-12 {
+    line-height: 12px;
+}
+
+.line-height-13 {
+    line-height: 13px;
+}
+
+.line-height-14 {
+    line-height: 14px;
+}
+
+.line-height-15 {
+    line-height: 15px;
+}
+
+.line-height-16 {
+    line-height: 16px;
+}
+
+.line-height-17 {
+    line-height: 17px;
+}
+
+.line-height-18 {
+    line-height: 18px;
+}
+
+.line-height-19 {
+    line-height: 19px;
+}
+
+.line-height-20 {
+    line-height: 20px;
+}
+
+.line-height-22 {
+    line-height: 22px;
+}
+
+.line-height-21 {
+    line-height: 21px;
+}
+
+.line-height-23 {
+    line-height: 23px;
+}
+
+.line-height-24 {
+    line-height: 24px;
+}
+
+.line-height-25 {
+    line-height: 25px;
+}
+
+.line-height-26 {
+    line-height: 26px;
+}
+
+.line-height-30 {
+    line-height: 30px;
+}
+
+.bottom-10 {
+    bottom: 10px;
+}
+
+.bottom-11 {
+    bottom: 11px;
+}
+
+.bottom-12 {
+    bottom: 12px;
+}
+
+.bottom-13 {
+    bottom: 13px;
+}
+
+.bottom-14 {
+    bottom: 14px;
+}
+
+.bottom-15 {
+    bottom: 15px;
+}
+
+.bottom-16 {
+    bottom: 16px;
+}
+
+.bottom-17 {
+    bottom: 17px;
+}
+
+.bottom-18 {
+    bottom: 18px;
+}
+
+.bottom-19 {
+    bottom: 19px;
+}
+
+.bottom-20 {
+    bottom: 20px;
+}
+
+.bottom-30 {
+    bottom: 30px;
+}
+
+.bottom-40 {
+    bottom: 40px;
+}
+
+.lighter-grey-border {
+    border-color: #ECECEC;
+}
+
+.color-lighter-grey {
+    color: #F1F1F1;
+}
+
+.overflow-scroll-y {
+    overflow-y: scroll;
+}
+
+input {
+    /* -webkit-appearance: none;*/
+    border-radius: 0;
+    margin-bottom: 1px !important;
+}
+
+a, a:hover {
+    color: #000;
+    text-decoration: none
+}
+
+.font-thin {
+    font-family: "Roboto", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+}
+
+.font-light {
+    font-family: "Roboto", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.font-regular {
+    font-family: "Roboto", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.font-bold {
+    font-family: "Roboto", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+/* colors */
+.chn-darker-grey {
+    color: #4D4D4D;
+}
+
+.chn-darker-grey-background {
+    background-color: #4D4D4D;
+}
+
+.chn-darker-grey-border {
+    border-color: #4D4D4D;
+}
+
+.chn-dark-grey {
+    color: #808080;
+}
+
+.chn-dark-grey-background {
+    background-color: #808080;
+}
+
+.chn-dark-grey-border {
+    border-color: #808080;
+}
+
+.chn-light-grey {
+    color: #CCCCCC;
+}
+
+.chn-light-grey-background {
+    background-color: #CCCCCC;
+}
+
+.chn-light-grey-border {
+    border-color: #CCCCCC;
+}
+
+.chn-lighter-grey {
+    color: #EFEFEF;
+}
+
+.chn-lighter-grey-background {
+    background-color: #EFEFEF;
+}
+
+.chn-lighter-grey-border {
+    border-color: #EFEFEF;
+}
+
+/* colors */

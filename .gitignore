@@ -1,0 +1,9 @@
+# Dependency directory
+node_modules
+
+# Grunt intermediate storage
+.grunt
+
+# Compiled & compressed files ( production ready )
+cloud
+config

@@ -1,0 +1,35 @@
+<!-- center view template -->
+<script class="center-view" type="text/template">
+    <div id="{{= id }}"
+         class="canvas" style="z-index:{{= index }}">
+        <div class="outer">
+            <div class="middle">
+                <div class="inner">
+                    {{= template }}
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- center view template -->
+
+<!-- fullscreen view template -->
+<script class="fullscreen-view" type="text/template">
+    <div id="{{= id }}"
+         class="canvas" style="z-index:{{= index }}">
+        {{= template }}
+    </div>
+</script>
+<!-- fullscreen view template -->
+
+<!-- top view template -->
+<script class="top-view" type="text/template">
+    <div class="outer" style="height: 50%">
+        <div class="middle">
+            <div class="inner">
+                {{= template }}
+            </div>
+        </div>
+    </div>
+</script>
+<!-- top view template -->

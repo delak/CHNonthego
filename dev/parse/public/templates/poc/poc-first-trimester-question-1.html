@@ -1,0 +1,36 @@
+<h1>Where are you encountering the client?</h1>
+
+<!--
+actions on each element is controlled by attaching the class name
+ .navigation-view
+ if you want to remove the next immediate view you attach the class name
+.back-view
+to an elements class and defining values for
+ a unique id - data-id="point-of-care-first-trimester-question-2"
+ a path to an html template to load - data-view="point-of-care/point-of-care-first-trimester-question-2.html"
+ the type of view it's either fullscreen-view || center-view  - data-type="fullscreen-view"
+-->
+
+<ul id="triage_list">
+    <li data-id="point-of-care-first-trimester-question-2"
+        data-type="center-view"
+        data-view="point-of-care/point-of-care-first-trimester-question-2.html"
+        class="triage_btn navigation-view">
+        <a href="#">Home visit</a>
+    </li>
+    <li class="triage_btn">
+        <a href="#">Outreach clinic</a>
+    </li>
+    <li class="triage_btn">
+        <a href="#">CHPS facility</a>
+    </li>
+    <li class="triage_btn">
+        <a href="#">Health Centre</a>
+    </li>
+    <li class="triage_btn">
+        <a href="#">Hospital</a>
+    </li>
+</ul>
+
+
+

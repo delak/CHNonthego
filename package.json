@@ -1,0 +1,10 @@
+{
+  "name": "CHN",
+  "version": "0.1.5",
+  "description": "Community Health Nurse",
+  "author": "Evans Domina Attafuah",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}

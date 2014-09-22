@@ -1,3 +1,12 @@
+/*
+Major COLORS used
+
+#53AB1F — deep green
+#6E5747 — dark brown
+#D5D3C4 — light brown
+
+*/
+
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
 html {
     color: #000;
@@ -181,7 +190,9 @@ p.clear {
 }
 
 .modal_close{
-    background-color: #fff;
+    background:url("../assets/icons/modal_close.png") no-repeat;
+    width: 20px;
+    height: 20px;
     color:#000;
     border:1px solid #53AB1F;
     border-radius: 30px;
@@ -303,6 +314,7 @@ p.clear {
     width: 95%;
 }
 
+
 /* 
 BEGIN menu icons 
 */
@@ -369,6 +381,7 @@ BEGIN menu icons
 /*
 END menu icons 
 */
+
 
 .main_menu li:hover, .sub_menu li:hover, .final_menu li:hover {
     background: linear-gradient(#E5E3DA, #DBD9CB);
@@ -498,13 +511,16 @@ li.triage_no {
     margin: 15px auto 130px;
     /*bottom: 100px;*/
     display: block;
+	width: 320px;
+	margin: 15px auto 130px;
+	/*bottom: 100px;*/
+	display: block;
 }
 
 fieldset {
     border: dashed #53AB1F 1px;
     padding: 10px;
     margin-bottom: 25px;
-    /*position: relative;*/
 }
 
 legend {
@@ -539,6 +555,25 @@ legend {
     border: 1px dotted #53AB1F;
 }
 
+.action_list li {
+	font-size: .95em;
+	padding: 9px 10px 9px 33px;
+	line-height: 1.5em;
+}
+
+ul.action_list li {
+	padding: 9px 10px;
+}
+
+.modal_link {
+	padding: 4px 7px;
+	margin: 0 3px;
+	display: inline-block;
+	background-color: #FFF;
+	border: 1px dotted #53AB1F;
+>>>>>>> 343d1ba7266f1f9d60429875d69ac15b6b8da4cd
+}
+
 .modal_link:hover {
     background-color: #DDEED2;
 }
@@ -565,6 +600,19 @@ ol > li:before {
     content: counter(li); /* Use the counter as content */
     counter-increment: li; /* Increment the counter by 1 */
     /* Position and style the number */
+=======
+    counter-reset:li;
+    margin-left:0;
+    padding-left:0;
+}
+
+ol > li {
+    position:relative;
+}
+
+ol > li:before {
+    content:counter(li);
+    counter-increment:li;
     position: absolute;
     top: 0;
     left: -5px;
@@ -572,11 +620,7 @@ ol > li:before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 43px;
-    /* Some space between the number and the content in browsers that support
-       generated content but not positioning it (Camino 2 is one example) */
-    /*margin-right: 8px;*/
     padding: 9px;
-    /*border-top:2px solid #666;*/
     color: #DDDBCF;
     font-size: 1.5em;
     /*background:#F7F7F4;*/
@@ -584,10 +628,6 @@ ol > li:before {
     /*font-family:"Helvetica Neue", Arial, sans-serif;*/
     text-align: center;
 }
-
-/*li ol,*/
-/*li ul {margin-top:6px;}*/
-/*ol li:last-child {margin-bottom:10px;}*/
 
 .toolbox {
     margin: 30px auto;
@@ -697,6 +737,7 @@ BEGIN action page borders and header styles
 END action page borders and header styles
 */
 
+
 /*
 BEGIN image definitons
 */
@@ -719,8 +760,36 @@ ol .illustration, ul .illustration {
     width: 70px;
     height: 99px;
     background: url('../assets/images/anaemiabig.png');
+	margin: 0 auto 20px;
+	/*display: block;*/
+	background: no-repeat left top;
+}
+ol .illustration, ul .illustration {
+	margin: 0;
+}
+.illustration_float {
+	/*display: block;*/
+	float: left;
+	margin-right: 8px;
 }
 
+.abdominalpains {
+	width: 63px;
+	height: 139px;
+	background: url('../assets/images/abdominalpains.png');
+	background-size: 63px 139px;
+}
+.anaemia {
+	width: 70px;
+	height: 99px;
+	background: url('../assets/images/anaemiabig.png');
+}
+.bleeding {
+	width: 49px;
+	height: 129px;
+	background: url('../assets/images/bleeding.png');
+	background-size: 49px 129px;
+}
 .deliveryprep_small {
     width: 134px;
     height: 99px;
@@ -733,28 +802,36 @@ ol .illustration, ul .illustration {
     height: 140px;
     background: url('../assets/images/fever.png');
 }
-
+.fever {
+	width: 118px;
+	height: 140px;
+	background: url('../assets/images/fever.png');
+	background-size: 118px 140px;
+}
+.headaches {
+	width: 68px;
+	height: 124px;
+	background: url('../assets/images/headaches.png');
+	background-size: 68px 124px;
+}
 .saveforbirth {
     width: 250px;
     height: 188px;
     background: url('../assets/images/saveforbirth.png');
     background-size: 250px 188px;
 }
-
 .swelling {
     width: 82px;
     height: 112px;
     background: url('../assets/images/swelling.png');
     background-size: 82px 112px;
 }
-
 .transport {
     width: 250px;
     height: 125px;
     background: url('../assets/images/transpo.png');
     background-size: 250px 125px;
 }
-
 .transport2 {
     width: 250px;
     height: 125px;
@@ -762,6 +839,12 @@ ol .illustration, ul .illustration {
     background-size: 250px 125px;
 }
 
+.vomiting {
+	width: 63px;
+	height: 109px;
+	background: url('../assets/images/excessivevomiting.png');
+	background-size: 63px 109px;
+}
 /*
 END image definitons
 */

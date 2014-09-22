@@ -66,23 +66,15 @@ h4 {
 	color: #53AB1F;
 }
 
-.top-section,.marquee, .tip {
+.marquee, .tip {
 	text-align: center;
 	width: 385px; 						/* needs to be variable */
 	height: 200px;						/* needs to be variable */
-/*	display: table-cell;*/
+	display: table-cell;
 	vertical-align: middle;
 	border-top: 5px solid #CBC8B5;
 	border-bottom: 5px solid #CBC8B5;
 	background: url('../assets/bg-marquee.png');
-}
-
-.bottom-section {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    z-index: 0;
 }
 
 .events_today {
@@ -112,11 +104,11 @@ h4 {
 	margin: 0 auto;
 }
 
-/*.main_menu, .sub_menu, .final_menu {
+.main_menu, .sub_menu, .final_menu {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
-}*/
+}
 
 .main_menu li, .sub_menu li, .final_menu li {
 	color: #6E5747;
@@ -270,7 +262,7 @@ END menu icons
 	margin-bottom: 35px;
 }
 
-.poc h4 { 						/* Point of Care title */
+.poc h4 { 						/* Point of Care page title */
 	color: #53AB1F;
 	font-size: 1.5em;
 	text-align: center;
@@ -278,11 +270,19 @@ END menu icons
 	line-height: 32px;
 }
 
-.poc h5 {						/* Point of Care subtitle */
+.poc h5 {						/* Point of Care page subtitle */
 	color: #6E5747;
 	font-size: 1.2em;
 	text-align: center;
 	font-weight: 300;
+}
+
+.poc h6 {						
+	color: #6E5747;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.4em;
+	margin-bottom: 10px;
 }
 
 .scroll {
@@ -505,6 +505,9 @@ BEGIN action page borders and header styles
 	background: #D3AAAC;
 }
 
+
+
+
 .action1:before,
 .action2:before,
 .action3:before {
@@ -543,26 +546,22 @@ BEGIN action page borders and header styles
 END action page borders and header styles
 */
 
-
 /*
 BEGIN image definitons
 */
 .illustration {
-	/*border: 1px solid #53AB1F;*/
 	margin: 0 auto 20px;
 	display: block;
 	background: no-repeat left top;
 }
 
-ol .illustration, ul .illustration {
-	margin: 0;
-	/*border: none;*/
+.inline {
+	/*display: block;*/
+	float: left;
 }
 
-.fever_large {
-	width: 118px;
-	height: 140px;
-	background: url('../assets/images/fever.png');
+ol .illustration, ul .illustration {
+	margin: 0;
 }
 
 .anaemia_large {
@@ -578,18 +577,10 @@ ol .illustration, ul .illustration {
 	background-size: 134px 99px;
 }
 
-.transport {
-	width: 200px;
-	height: 100px;
-	background: url('../assets/images/transpo.png');
-	background-size: 200px 100px;
-}
-
-.transport2 {
-	width: 250px;
-	height: 125px;
-	background: url('../assets/images/transpo2.png');
-	background-size: 250px 125px;
+.fever_large {
+	width: 118px;
+	height: 140px;
+	background: url('../assets/images/fever.png');
 }
 
 .saveforbirth {
@@ -597,6 +588,27 @@ ol .illustration, ul .illustration {
 	height: 188px;
 	background: url('../assets/images/saveforbirth.png');
 	background-size: 250px 188px;
+}
+
+.swelling {
+	width: 82px;
+	height: 112px;
+	background: url('../assets/images/swelling.png');
+	background-size: 82px 112px;
+}
+
+.transport {
+	width: 250px;
+	height: 125px;
+	background: url('../assets/images/transpo.png');
+	background-size: 250px 125px;
+}
+
+.transport2 {
+	width: 250px;
+	height: 125px;
+	background: url('../assets/images/transpo2.png');
+	background-size: 250px 125px;
 }
 /*
 END image definitons

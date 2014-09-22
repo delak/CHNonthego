@@ -122,7 +122,7 @@
         var _carousel = $(id).find('.carousel');
         if (_carousel.length >= 1) {
             if (typeof $.fn.slick !== 'undefined') {
-                var slick_list = $(id).find('.slick-list');
+
                 var slideOpt = {
                     'lazyLoad': 'progressive',
                     'touchMove': true,
@@ -133,8 +133,10 @@
                     speed: 300
                 };
                 $(_carousel).slick(slideOpt);
+
                 if (App.TS_HEIGHT !== 0) {
-                    $(slick_list).height(App.TS_HEIGHT - 50);
+                    var slick_list = $(id).find('.slick-list');
+                    $(slick_list).height(App.TS_HEIGHT);
                 }
             }
         }
@@ -173,7 +175,8 @@
             if (typeof _type === 'undefined' || _type === '') {
                 _type = 'center-view';
             }
-            var temp_id = "view"+App.createHash();
+            console.log(_type);
+            var temp_id = "view" + App.createHash();
             var _id = App.HASH_TAG + temp_id;
             if (typeof _view === 'undefined') {
                 alert("Error Loading Page");
@@ -247,7 +250,7 @@
     App.screenx = function (el, callback) {
 
         // $(el).animate({ y: -(App.HEIGHT)}, 1000, 'ease');
-        tram(el).add('transform 0.8s ease').start({x: (App.WIDTH)}, function () {
+        tram(el).add('transform 1.2s ease').start({x: (App.WIDTH)}, function () {
             if (typeof callback === 'function') {
                 callback();
             }

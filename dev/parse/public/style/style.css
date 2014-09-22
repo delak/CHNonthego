@@ -279,17 +279,14 @@ p.clear {
 }
 
 .final_menu {
-<<<<<<< HEAD
     min-height: 200px;
     height: 350px;
     max-height: auto;
     overflow-y: scroll;
-=======
 /*	min-height: 200px;
 	height: 350px; 
 	max-height: auto;
 	overflow-y: scroll;*/
->>>>>>> FETCH_HEAD
 }
 
 .final_menu li {

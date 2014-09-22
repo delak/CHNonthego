@@ -256,11 +256,11 @@ p.clear {
     margin: 0 auto;
 }
 
-/*.main_menu, .sub_menu, .final_menu {
+.main_menu, .sub_menu, .final_menu {
     width: 100%;
     position: absolute;
     bottom: 0;
-}*/
+}
 
 .main_menu li, .sub_menu li, .final_menu li {
     color: #6E5747;
@@ -279,10 +279,10 @@ p.clear {
 }
 
 .final_menu {
-    min-height: 200px;
+/*    min-height: 200px;
     height: 350px;
     max-height: auto;
-    overflow-y: scroll;
+    overflow-y: scroll;*/
 }
 
 .final_menu li {
@@ -425,6 +425,29 @@ END menu icons
 
 .link_preview {
     font-size: 0.7em;
+}
+
+.lesson_row {
+	width: 1000px;
+	padding: 25px;
+}
+
+.lesson_row h4 {
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+.modules_row {
+	margin: 15px 0;
+}
+
+.pretest {
+	width: 140px;
+	height: 80px;
+	color: #6e5747;
+	line-height: 1.4em;
+	padding: 80px 10px 0 ;
+	background: #f7f7f4 url('../assets/icons/pretest_check.png') no-repeat 10px 10px;
 }
 
 .main_title {
@@ -587,46 +610,29 @@ ul.action_list li {
 }
 
 ol {
-    counter-reset: li; /* Initiate a counter */
-    margin-left: 0; /* Remove the default left margin */
-    padding-left: 0; /* Remove the default left padding */
-    /*list-style-position: inside;*/
+    counter-reset:li; /* Initiate a counter */
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
 }
 
 ol > li {
-    position: relative; /* Create a positioning context */
-    /*margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers *!/*/
-    /*padding:4px 8px; /* Add some spacing around the content *!/*/
-    /*list-style:none; /* Disable the normal item numbering *!/*/
+    position:relative; /* Create a positioning context */
 }
 
 ol > li:before {
-    content: counter(li); /* Use the counter as content */
-    counter-increment: li; /* Increment the counter by 1 */
-    /* Position and style the number */
-    counter-reset:li;
-    margin-left:0;
-    padding-left:0;
-}
-
-ol > li {
-    position:relative;
-}
-
-ol > li:before {
-    content:counter(li);
-    counter-increment:li;
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
     position: absolute;
     top: 0;
     left: -5px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
     width: 43px;
     padding: 9px;
     color: #DDDBCF;
     font-size: 1.5em;
-    text-align: center;
+    text-align:center;
 }
 
 .toolbox {

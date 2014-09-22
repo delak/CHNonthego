@@ -190,15 +190,12 @@ p.clear {
 }
 
 .modal_close{
-    background:url("../assets/icons/modal_close.png") no-repeat;
-    width: 20px;
-    height: 20px;
-    color:#000;
-    border:1px solid #53AB1F;
-    border-radius: 30px;
+    background: url("../assets/icons/modal_close.png") no-repeat;
+    width: 28px;
+    height: 28px;
     position: absolute;
-    right: -5px;
-    top:-8px;
+    right: -7px;
+    top: -18px;
 }
 
 .body {

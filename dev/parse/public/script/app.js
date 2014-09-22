@@ -81,6 +81,13 @@
     // the view stack index
     App.Z_INDEX = 0;
 
+    //override underscore template tags
+    _.templateSettings = {
+        evaluate: /\{\{(.+?)\}\}/g,
+        interpolate: /\{\{=(.+?)\}\}/g,
+        escape: /\{\{-(.+?)\}\}/g
+    };
+
 
     App.init = function () {
 
@@ -162,11 +169,33 @@
 
     //function to show and load content into a modal dialog
     App.modalView = function () {
+
+        //look for all class names with the name navigation-view
+        //attach an event to them
+        //extract the data object
         $(document).delegate('.modal-view', App.CURRENT_EVENT, function (e) {
+
             e.preventDefault();
-            // var _view = $(this).data('view');
-            var _modal = $("script.modal-view").html();
-            $('body').prepend(_modal);
+            var _view = $(this).data('view');
+            var _type = $(this).data('type');
+            var _template = ['script/text!templates/' + _view];
+            if (typeof _view === 'undefined') {
+                alert("Error Loading Modal");
+            } else {
+                if (typeof _type !== 'undefined' && typeof _type === 'image') {
+                    _template = ['script/text!' + _view];
+                }
+                require(_template, function (template) {
+
+                    var _json = {
+                        template: template,
+                        index: App.Z_INDEX++
+                    };
+                    var temp = _.template($("script.modal-view").html(), _json);
+                    $('body').prepend(temp);
+
+                });
+            }
         });
     };
 
@@ -180,14 +209,6 @@
 
             e.preventDefault();
             var _view = $(this).data('view');
-            var _title = $(this).data('title');
-            /*   var _type = $(this).data('type');
-             if (typeof _type === 'undefined' || _type === '') {
-             _type = 'center-view';
-             }*/
-            if (typeof _title === 'undefined' || _title === '') {
-                _title = 'CHN On the Go';
-            }
             var temp_id = "view" + App.createHash();
             var _id = App.HASH_TAG + temp_id;
             if (typeof _view === 'undefined') {
@@ -195,14 +216,8 @@
             } else {
                 require(['script/text!templates/' + _view], function (template) {
 
-                    _.templateSettings = {
-                        evaluate: /\{\{(.+?)\}\}/g,
-                        interpolate: /\{\{=(.+?)\}\}/g,
-                        escape: /\{\{-(.+?)\}\}/g
-                    };
 
                     var _json = {
-                        title: _title,
                         template: template,
                         id: temp_id,
                         index: App.Z_INDEX++

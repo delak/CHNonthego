@@ -186,14 +186,13 @@
                     _template = ['script/text!' + _view];
                 }
                 require(_template, function (template) {
-
                     var _json = {
-                        template: template,
-                        index: App.Z_INDEX++
+                        template: template
                     };
                     var temp = _.template($("script.modal-view").html(), _json);
-                    $('body').prepend(temp);
-
+                    $('body').append(temp);
+                    var info = $('modal').find('.modal_info').next();
+                    console.log($(info).height());
                 });
             }
         });

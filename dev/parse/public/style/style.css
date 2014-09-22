@@ -69,7 +69,7 @@ input, textarea, select {
 }
 
 input, textarea, select {
-    *font-size: 100%
+    font-size: 100%
 }
 
 legend {
@@ -153,11 +153,15 @@ p.clear {
     text-align: center;
     width: 100%; /* needs to be variable */
     height: 200px; /* needs to be variable */
-  /*  display: table-cell;*/
+    /*  display: table-cell;*/
     vertical-align: middle;
     border-top: 5px solid #CBC8B5;
     border-bottom: 5px solid #CBC8B5;
     background: url('../assets/bg-marquee.png');
+}
+
+.carousel{
+    padding-top: 30px;
 }
 
 .bottom-section {
@@ -181,7 +185,7 @@ p.clear {
     z-index: 999999999;
 }
 
-.modal_content{
+.modal_content {
     background-color: #fff;
     box-shadow: 0 2px 12px 0 #6b6767;
     border-radius: 4px;
@@ -192,12 +196,12 @@ p.clear {
 
 }
 
-.modal_content img{
+.modal_content img {
     display: block;
     margin: 0 auto;
 }
 
-.modal_close{
+.modal_close {
     background: url("../assets/icons/modal_close.png") no-repeat;
     width: 28px;
     height: 28px;
@@ -283,10 +287,10 @@ p.clear {
     height: 350px;
     max-height: auto;
     overflow-y: scroll;
-/*	min-height: 200px;
-	height: 350px; 
-	max-height: auto;
-	overflow-y: scroll;*/
+    /*	min-height: 200px;
+        height: 350px;
+        max-height: auto;
+        overflow-y: scroll;*/
 }
 
 .final_menu li {
@@ -323,8 +327,7 @@ p.clear {
     width: 95%;
 }
 
-
-/* 
+/*
 BEGIN menu icons 
 */
 .planner .btn_icon {
@@ -390,7 +393,6 @@ BEGIN menu icons
 /*
 END menu icons 
 */
-
 
 .main_menu li:hover, .sub_menu li:hover, .final_menu li:hover {
     background: linear-gradient(#E5E3DA, #DBD9CB);
@@ -520,10 +522,10 @@ li.triage_no {
     margin: 15px auto 130px;
     /*bottom: 100px;*/
     display: block;
-	width: 320px;
-	margin: 15px auto 130px;
-	/*bottom: 100px;*/
-	display: block;
+    width: 320px;
+    margin: 15px auto 130px;
+    /*bottom: 100px;*/
+    display: block;
 }
 
 fieldset {
@@ -565,22 +567,21 @@ legend {
 }
 
 .action_list li {
-	font-size: .95em;
-	padding: 9px 10px 9px 33px;
-	line-height: 1.5em;
+    font-size: .95em;
+    padding: 9px 10px 9px 33px;
+    line-height: 1.5em;
 }
 
 ul.action_list li {
-	padding: 9px 10px;
+    padding: 9px 10px;
 }
 
 .modal_link {
-	padding: 4px 7px;
-	margin: 0 3px;
-	display: inline-block;
-	background-color: #FFF;
-	border: 1px dotted #53AB1F;
->>>>>>> 343d1ba7266f1f9d60429875d69ac15b6b8da4cd
+    padding: 4px 7px;
+    margin: 0 3px;
+    display: inline-block;
+    background-color: #FFF;
+    border: 1px dotted #53AB1F;
 }
 
 .modal_link:hover {
@@ -609,19 +610,18 @@ ol > li:before {
     content: counter(li); /* Use the counter as content */
     counter-increment: li; /* Increment the counter by 1 */
     /* Position and style the number */
-=======
-    counter-reset:li;
-    margin-left:0;
-    padding-left:0;
+    counter-reset: li;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 ol > li {
-    position:relative;
+    position: relative;
 }
 
 ol > li:before {
-    content:counter(li);
-    counter-increment:li;
+    content: counter(li);
+    counter-increment: li;
     position: absolute;
     top: 0;
     left: -5px;
@@ -746,7 +746,6 @@ BEGIN action page borders and header styles
 END action page borders and header styles
 */
 
-
 /*
 BEGIN image definitons
 */
@@ -769,36 +768,41 @@ ol .illustration, ul .illustration {
     width: 70px;
     height: 99px;
     background: url('../assets/images/anaemiabig.png');
-	margin: 0 auto 20px;
-	/*display: block;*/
-	background: no-repeat left top;
+    margin: 0 auto 20px;
+    /*display: block;*/
+    background: no-repeat left top;
 }
+
 ol .illustration, ul .illustration {
-	margin: 0;
+    margin: 0;
 }
+
 .illustration_float {
-	/*display: block;*/
-	float: left;
-	margin-right: 8px;
+    /*display: block;*/
+    float: left;
+    margin-right: 8px;
 }
 
 .abdominalpains {
-	width: 63px;
-	height: 139px;
-	background: url('../assets/images/abdominalpains.png');
-	background-size: 63px 139px;
+    width: 63px;
+    height: 139px;
+    background: url('../assets/images/abdominalpains.png');
+    background-size: 63px 139px;
 }
+
 .anaemia {
-	width: 70px;
-	height: 99px;
-	background: url('../assets/images/anaemiabig.png');
+    width: 70px;
+    height: 99px;
+    background: url('../assets/images/anaemiabig.png');
 }
+
 .bleeding {
-	width: 49px;
-	height: 129px;
-	background: url('../assets/images/bleeding.png');
-	background-size: 49px 129px;
+    width: 49px;
+    height: 129px;
+    background: url('../assets/images/bleeding.png');
+    background-size: 49px 129px;
 }
+
 .deliveryprep_small {
     width: 134px;
     height: 99px;
@@ -811,36 +815,42 @@ ol .illustration, ul .illustration {
     height: 140px;
     background: url('../assets/images/fever.png');
 }
+
 .fever {
-	width: 118px;
-	height: 140px;
-	background: url('../assets/images/fever.png');
-	background-size: 118px 140px;
+    width: 118px;
+    height: 140px;
+    background: url('../assets/images/fever.png');
+    background-size: 118px 140px;
 }
+
 .headaches {
-	width: 68px;
-	height: 124px;
-	background: url('../assets/images/headaches.png');
-	background-size: 68px 124px;
+    width: 68px;
+    height: 124px;
+    background: url('../assets/images/headaches.png');
+    background-size: 68px 124px;
 }
+
 .saveforbirth {
     width: 250px;
     height: 188px;
     background: url('../assets/images/saveforbirth.png');
     background-size: 250px 188px;
 }
+
 .swelling {
     width: 82px;
     height: 112px;
     background: url('../assets/images/swelling.png');
     background-size: 82px 112px;
 }
+
 .transport {
     width: 250px;
     height: 125px;
     background: url('../assets/images/transpo.png');
     background-size: 250px 125px;
 }
+
 .transport2 {
     width: 250px;
     height: 125px;
@@ -849,55 +859,63 @@ ol .illustration, ul .illustration {
 }
 
 .vomiting {
-	width: 63px;
-	height: 109px;
-	background: url('../assets/images/excessivevomiting.png');
-	background-size: 63px 109px;
+    width: 63px;
+    height: 109px;
+    background: url('../assets/images/excessivevomiting.png');
+    background-size: 63px 109px;
 }
+
 /*
 END image definitons
 */
-
 
 /*
 BEGIN glyphicon definitons
 */
 .glyphicon {
-	padding-left: 32px;
+    padding-left: 32px;
 }
 
 .check {
-	background: url('../assets/icons/glyphicons/glyphicons_152_check.png') no-repeat 9px 8px;
-	background-size: 14px 12px;
+    background: url('../assets/icons/glyphicons/glyphicons_152_check.png') no-repeat 9px 8px;
+    background-size: 14px 12px;
 }
+
 .clock {
-	background: url('../assets/icons/glyphicons/glyphicons_054_clock.png') no-repeat 9px 8px;
-	background-size: 12px 12px;
+    background: url('../assets/icons/glyphicons/glyphicons_054_clock.png') no-repeat 9px 8px;
+    background-size: 12px 12px;
 }
+
 .cutlery {
-	background: url('../assets/icons/glyphicons/glyphicons_276_cutlery.png') no-repeat 9px 8px;
-	background-size: 8px 12px;
+    background: url('../assets/icons/glyphicons/glyphicons_276_cutlery.png') no-repeat 9px 8px;
+    background-size: 8px 12px;
 }
+
 .eye_open {
-	background: url('../assets/icons/glyphicons/glyphicons_051_eye_open.png') no-repeat 5px 8px;
-	background-size: 20px 12px;
+    background: url('../assets/icons/glyphicons/glyphicons_051_eye_open.png') no-repeat 5px 8px;
+    background-size: 20px 12px;
 }
+
 .heart {
-	background: url('../assets/icons/glyphicons/glyphicons_012_heart.png') no-repeat 9px 8px;
-	background-size: 12px 12px;
+    background: url('../assets/icons/glyphicons/glyphicons_012_heart.png') no-repeat 9px 8px;
+    background-size: 12px 12px;
 }
+
 .smoking {
-	background: url('../assets/icons/glyphicons/glyphicons_362_smoking.png') no-repeat 9px 8px;
-	background-size: 14px 12px;
+    background: url('../assets/icons/glyphicons/glyphicons_362_smoking.png') no-repeat 9px 8px;
+    background-size: 14px 12px;
 }
+
 .stroller {
-	background: url('../assets/icons/glyphicons/glyphicons_075_stroller.png') no-repeat 9px 8px;
-	background-size: 13px 12px;
+    background: url('../assets/icons/glyphicons/glyphicons_075_stroller.png') no-repeat 9px 8px;
+    background-size: 13px 12px;
 }
+
 .warning {
-	background: url('../assets/icons/glyphicons/glyphicons_078_warning_sign.png') no-repeat 9px 8px;
-	background-size: 13px 12px;
+    background: url('../assets/icons/glyphicons/glyphicons_078_warning_sign.png') no-repeat 9px 8px;
+    background-size: 13px 12px;
 }
+
 /*
 END icon definitons
 */

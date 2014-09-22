@@ -136,7 +136,7 @@
                 var slideOpt = {
                     'lazyLoad': 'progressive',
                     'touchMove': true,
-                    infinite: false,
+                    infinite: true,
                     'dots': true,
                     'arrows': false,
                     'autoplay': false,
@@ -145,8 +145,8 @@
                 $(_carousel).slick(slideOpt);
 
                 if (App.TS_HEIGHT !== 0) {
-                    var slick_list = $(id).find('.slick-list');
-                    $(slick_list).height(App.TS_HEIGHT);
+                  //  var slick_list = $(id).find('.slick-list');
+                  //  $(slick_list).height(App.TS_HEIGHT);
                 }
             }
         }
@@ -163,12 +163,13 @@
             var window_height = $(window).height();
             var ts_height = (window_height - _bottom.height()) - 4;
             App.TS_HEIGHT = _top.height();
-            _top.height(ts_height);
+            _top.height(ts_height - 6);
         }
     };
 
     //function to show and load content into a modal dialog
     App.modalView = function () {
+
 
         //look for all class names with the name navigation-view
         //attach an event to them
@@ -178,7 +179,6 @@
             e.preventDefault();
             var _view = $(this).data('view');
             var _type = $(this).data('type');
-            //  $.facebox({ ajax:'templates/'+ _view });
 
             var _template = ['script/text!templates/' + _view];
             if (typeof _view === 'undefined') {
@@ -195,12 +195,15 @@
                     $('body').append(temp);
                     var content = '.modal_content';
                     console.log($(window).height());
-                    window.setTimeout(function(){
+                    window.setTimeout(function () {
                         console.log($(content).height());
                         $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).fadeIn();
-                    },100)
-
-
+                    }, 100)
+                    $('.modal-close').off().on(App.CURRENT_EVENT, function (e) {
+                        $('.modal').fadeOut(function () {
+                            $(this).remove();
+                        });
+                    });
                 });
             }
         });

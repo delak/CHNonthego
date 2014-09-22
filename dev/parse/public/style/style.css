@@ -371,14 +371,14 @@ legend {
 	line-height: 1.3em;
 }
 
-.action_list li, .advise_list li {
+.action_list li {
 	font-size: .95em;
 	padding: 9px 10px 9px 33px;
 	line-height: 1.5em;
 }
 
-.advise_list li {
-	padding: 9px 10px 9px 33px;
+ul.action_list li {
+	padding: 9px 10px;
 }
 
 .modal_link {
@@ -509,9 +509,6 @@ BEGIN action page borders and header styles
 	background: #D3AAAC;
 }
 
-
-
-
 .action1:before,
 .action2:before,
 .action3:before {
@@ -550,69 +547,90 @@ BEGIN action page borders and header styles
 END action page borders and header styles
 */
 
+
 /*
 BEGIN image definitons
 */
 .illustration {
 	margin: 0 auto 20px;
-	display: block;
-	background: no-repeat left top;
-}
-
-.inline {
 	/*display: block;*/
-	float: left;
+	background: no-repeat left top;
 }
 
 ol .illustration, ul .illustration {
 	margin: 0;
 }
 
-.anaemia_large {
+.illustration_float {
+	/*display: block;*/
+	float: left;
+	margin-right: 8px;
+}
+
+.abdominalpains {
+	width: 63px;
+	height: 139px;
+	background: url('../assets/images/abdominalpains.png');
+	background-size: 63px 139px;
+}
+.anaemia {
 	width: 70px;
 	height: 99px;
 	background: url('../assets/images/anaemiabig.png');
 }
-
+.bleeding {
+	width: 49px;
+	height: 129px;
+	background: url('../assets/images/bleeding.png');
+	background-size: 49px 129px;
+}
 .deliveryprep_small {
 	width: 134px;
 	height: 99px;
 	background: url('../assets/images/deliveryprep.png');
 	background-size: 134px 99px;
 }
-
-.fever_large {
+.fever {
 	width: 118px;
 	height: 140px;
 	background: url('../assets/images/fever.png');
+	background-size: 118px 140px;
 }
-
+.headaches {
+	width: 68px;
+	height: 124px;
+	background: url('../assets/images/headaches.png');
+	background-size: 68px 124px;
+}
 .saveforbirth {
 	width: 250px;
 	height: 188px;
 	background: url('../assets/images/saveforbirth.png');
 	background-size: 250px 188px;
 }
-
 .swelling {
 	width: 82px;
 	height: 112px;
 	background: url('../assets/images/swelling.png');
 	background-size: 82px 112px;
 }
-
 .transport {
 	width: 250px;
 	height: 125px;
 	background: url('../assets/images/transpo.png');
 	background-size: 250px 125px;
 }
-
 .transport2 {
 	width: 250px;
 	height: 125px;
 	background: url('../assets/images/transpo2.png');
 	background-size: 250px 125px;
+}
+.vomiting {
+	width: 63px;
+	height: 109px;
+	background: url('../assets/images/excessivevomiting.png');
+	background-size: 63px 109px;
 }
 /*
 END image definitons

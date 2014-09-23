@@ -251,7 +251,7 @@ p.clear {
 }
 
 .tip {
-    line-height: 1.4em;
+    line-height: 1.5em;
 }
 
 .tip_body {
@@ -328,73 +328,6 @@ p.clear {
     width: 95%;
 }
 
-/*
-BEGIN menu icons 
-*/
-.planner .btn_icon {
-    background: url('../assets/icons/menu/planner.png') no-repeat;
-}
-
-.poc .btn_icon {
-    background: url('../assets/icons/menu/poc.png') no-repeat;
-}
-
-.learning_center .btn_icon {
-    background: url('../assets/icons/menu/learning.png') no-repeat;
-}
-
-.achievements .btn_icon {
-    background: url('../assets/icons/menu/achievements.png') no-repeat;
-}
-
-.staying_well .btn_icon {
-    background: url('../assets/icons/menu/stayingwell.png') no-repeat;
-}
-
-.antenatal .btn_icon {
-    background: url('../assets/icons/placeholder.png') no-repeat 20px center;
-}
-
-.fam_planning .btn_icon {
-    background: url('../assets/icons/placeholder.png') no-repeat 20px center;
-}
-
-.postnatal .btn_icon {
-    background: url('../assets/icons/placeholder.png') no-repeat 20px center;
-}
-
-.learning_modules .btn_icon {
-    background: url('../assets/icons/menu/learning_modules.png') no-repeat 20px center;
-}
-
-.learning_references .btn_icon {
-    background: url('../assets/icons/menu/learning_references.png') no-repeat 20px center;
-}
-
-.diagnostic .btn_icon {
-    background: url('../assets/icons/menu/diagnostic.png') no-repeat 20px center;
-}
-
-.counseling .btn_icon {
-    background: url('../assets/icons/menu/counseling.png') no-repeat 20px center;
-}
-
-.calculators .btn_icon {
-    background: url('../assets/icons/menu/calculators.png') no-repeat 20px center;
-}
-
-.references .btn_icon {
-    background: url('../assets/icons/menu/references.png') no-repeat 20px center;
-}
-
-.final_menu .btn_icon {
-    background: linear-gradient(#87C463, #53AB1F);
-}
-
-/*
-END menu icons 
-*/
-
 .main_menu li:hover, .sub_menu li:hover, .final_menu li:hover {
     background: linear-gradient(#E5E3DA, #DBD9CB);
 }
@@ -449,7 +382,6 @@ END menu icons
 	margin: 15px 0 5px;
 }
 
-<<<<<<< HEAD
 .fader {
 	width: 100px;
 	height: 160px;
@@ -461,15 +393,13 @@ END menu icons
 
 div.scrollfader {
 	width: 100%;
-	height: 50px;
+	height: 30px;
 	position: absolute;
 	bottom: 0;
 	z-index: 1001;
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1));
 }
 
-=======
->>>>>>> FETCH_HEAD
 .modules_row li {
 	float: left;
 }
@@ -569,12 +499,13 @@ li.triage_no {
 #back_btn {
     width: 90px;
     height: 60px;
-    left: 50%;
-    margin-left: -45px;
-    margin-bottom: 40px;
+    margin: 0 auto;
+/*    left: 50%;
+    margin-left: -45px;*/
+    /*margin-bottom: 40px;*/
     background: #FFF url('../assets/btn-back.png') no-repeat center top;
-    position: absolute;
-    bottom: 0;
+    /*position: absolute;*/
+    /*bottom: 0;*/
     z-index: 1002;
 }
 
@@ -730,6 +661,60 @@ ol > li.module:before {
     padding-bottom: 3px;
 }
 
+
+/*
+BEGIN menu icons 
+*/
+.planner .btn_icon {
+    background: url('../assets/icons/menu/planner.png') no-repeat;
+}
+.poc .btn_icon {
+    background: url('../assets/icons/menu/poc.png') no-repeat;
+}
+.learning_center .btn_icon {
+    background: url('../assets/icons/menu/learning.png') no-repeat;
+}
+.achievements .btn_icon {
+    background: url('../assets/icons/menu/achievements.png') no-repeat;
+}
+.staying_well .btn_icon {
+    background: url('../assets/icons/menu/stayingwell.png') no-repeat;
+}
+.antenatal .btn_icon {
+    background: url('../assets/icons/menu/antenatal.png') no-repeat 20px center;
+}
+.fam_planning .btn_icon {
+    background: url('../assets/icons/menu/famplanning.png') no-repeat 20px center;
+}
+.postnatal .btn_icon {
+    background: url('../assets/icons/menu/postnatal.png') no-repeat 20px center;
+}
+.learning_modules .btn_icon {
+    background: url('../assets/icons/menu/learning_modules.png') no-repeat 20px center;
+}
+.learning_references .btn_icon {
+    background: url('../assets/icons/menu/learning_references.png') no-repeat 20px center;
+}
+.diagnostic .btn_icon {
+    background: url('../assets/icons/menu/diagnostic.png') no-repeat 20px center;
+}
+.counseling .btn_icon {
+    background: url('../assets/icons/menu/counseling.png') no-repeat 20px center;
+}
+.calculators .btn_icon {
+    background: url('../assets/icons/menu/calculators.png') no-repeat 20px center;
+}
+.references .btn_icon {
+    background: url('../assets/icons/menu/references.png') no-repeat 20px center;
+}
+.final_menu .btn_icon {
+    background: linear-gradient(#87C463, #53AB1F);
+}
+/*
+END menu icons 
+*/
+
+
 /*
 BEGIN action page borders and header styles
 */
@@ -745,17 +730,14 @@ BEGIN action page borders and header styles
     right: 0;
     height: 9px;
 }
-
 .action1:before,
 .action1:after {
     background: #CBE6BB;
 }
-
 .action2:before,
 .action2:after {
     background: #F4E19D;
 }
-
 .action3:before,
 .action3:after {
     background: #D3AAAC;
@@ -792,6 +774,7 @@ BEGIN action page borders and header styles
 END action page borders and header styles
 */
 
+
 /*
 BEGIN image definitons
 */
@@ -810,15 +793,6 @@ ol .illustration, ul .illustration {
     margin: 0;
 }
 
-.anaemia_large {
-    width: 70px;
-    height: 99px;
-    background: url('../assets/images/anaemiabig.png');
-    margin: 0 auto 20px;
-    /*display: block;*/
-    background: no-repeat left top;
-}
-
 ol .illustration, ul .illustration {
     margin: 0;
 }
@@ -835,85 +809,82 @@ ol .illustration, ul .illustration {
     background: url('../assets/images/abdominalpains.png');
     background-size: 63px 139px;
 }
-
 .anaemia {
     width: 70px;
     height: 99px;
     background: url('../assets/images/anaemiabig.png');
 }
-
+.anaemia_large {
+    width: 70px;
+    height: 99px;
+    background: url('../assets/images/anaemiabig.png');
+    margin: 0 auto 20px;
+    /*display: block;*/
+    background: no-repeat left top;
+}
 .bleeding {
     width: 49px;
     height: 129px;
     background: url('../assets/images/bleeding.png');
     background-size: 49px 129px;
 }
-
 .deliveryprep_small {
     width: 134px;
     height: 99px;
     background: url('../assets/images/deliveryprep.png');
     background-size: 134px 99px;
 }
-
 .fever_large {
     width: 118px;
     height: 140px;
     background: url('../assets/images/fever.png');
 }
-
 .fever {
     width: 118px;
     height: 140px;
     background: url('../assets/images/fever.png');
     background-size: 118px 140px;
 }
-
 .headaches {
     width: 68px;
     height: 124px;
     background: url('../assets/images/headaches.png');
     background-size: 68px 124px;
 }
-
 .saveforbirth {
     width: 250px;
     height: 188px;
     background: url('../assets/images/saveforbirth.png');
     background-size: 250px 188px;
 }
-
 .swelling {
     width: 82px;
     height: 112px;
     background: url('../assets/images/swelling.png');
     background-size: 82px 112px;
 }
-
 .transport {
     width: 250px;
     height: 125px;
     background: url('../assets/images/transpo.png');
     background-size: 250px 125px;
 }
-
 .transport2 {
     width: 250px;
     height: 125px;
     background: url('../assets/images/transpo2.png');
     background-size: 250px 125px;
 }
-
 .vomiting {
     width: 63px;
     height: 109px;
     background: url('../assets/images/excessivevomiting.png');
     background-size: 63px 109px;
 }
-
 /*
 END image definitons
 */
+
 
 /*
 BEGIN glyphicon definitons
@@ -926,42 +897,34 @@ BEGIN glyphicon definitons
     background: url('../assets/icons/glyphicons/glyphicons_152_check.png') no-repeat 9px 8px;
     background-size: 14px 12px;
 }
-
 .clock {
     background: url('../assets/icons/glyphicons/glyphicons_054_clock.png') no-repeat 9px 8px;
     background-size: 12px 12px;
 }
-
 .cutlery {
     background: url('../assets/icons/glyphicons/glyphicons_276_cutlery.png') no-repeat 9px 8px;
     background-size: 8px 12px;
 }
-
 .eye_open {
     background: url('../assets/icons/glyphicons/glyphicons_051_eye_open.png') no-repeat 5px 8px;
     background-size: 20px 12px;
 }
-
 .heart {
     background: url('../assets/icons/glyphicons/glyphicons_012_heart.png') no-repeat 9px 8px;
     background-size: 12px 12px;
 }
-
 .smoking {
     background: url('../assets/icons/glyphicons/glyphicons_362_smoking.png') no-repeat 9px 8px;
     background-size: 14px 12px;
 }
-
 .stroller {
     background: url('../assets/icons/glyphicons/glyphicons_075_stroller.png') no-repeat 9px 8px;
     background-size: 13px 12px;
 }
-
 .warning {
     background: url('../assets/icons/glyphicons/glyphicons_078_warning_sign.png') no-repeat 9px 8px;
     background-size: 13px 12px;
 }
-
 /*
 END icon definitons
 */

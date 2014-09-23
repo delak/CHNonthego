@@ -1,24 +1,24 @@
-<!-- fullscreen view template -->
+<!-- begin fullscreen view template -->
 <script class="fullscreen-view" type="text/template">
     <div id="{{= id }}"
          class="canvas" style="z-index:{{= index }}">
         {{= template }}
     </div>
 </script>
-<!-- fullscreen view template -->
-<!-- modal view template -->
+<!-- end fullscreen view template -->
+<!-- begin modal view template -->
 <script class="modal-view" type="text/template">
     <div class="modal modal-close">
         <div style="position: relative">
             <div class="modal_content" style="display: none">
                 <div class="modal_close modal-close"></div>
-                {{= template }}
+                <div style="background-color: #fff"> {{= template }} </div>
             </div>
         </div>
     </div>
 </script>
-<!-- modal view template -->
-<!-- image view template -->
+<!-- end modal view template -->
+<!-- begin image view template -->
 <script class="image-view" type="text/template">
     <div class="modal modal-close">
         <div style="position: relative">
@@ -31,4 +31,4 @@
         </div>
     </div>
 </script>
-<!-- image view template -->
+<!-- end image view template -->

@@ -153,7 +153,7 @@ p.clear {
     text-align: center;
     width: 100%; /* needs to be variable */
     height: 200px; /* needs to be variable */
-    /*  display: table-cell;*/
+    display: table-cell;
     vertical-align: middle;
     border-top: 5px solid #CBC8B5;
     border-bottom: 5px solid #CBC8B5;
@@ -260,11 +260,11 @@ p.clear {
     margin: 0 auto;
 }
 
-.main_menu, .sub_menu, .final_menu {
+/*.main_menu, .sub_menu, .final_menu {
     width: 100%;
     position: absolute;
     bottom: 0;
-}
+}*/
 
 .main_menu li, .sub_menu li, .final_menu li {
     color: #6E5747;
@@ -449,6 +449,7 @@ END menu icons
 	margin: 15px 0 5px;
 }
 
+<<<<<<< HEAD
 .fader {
 	width: 100px;
 	height: 160px;
@@ -467,6 +468,8 @@ div.scrollfader {
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1));
 }
 
+=======
+>>>>>>> FETCH_HEAD
 .modules_row li {
 	float: left;
 }

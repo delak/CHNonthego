@@ -4,7 +4,6 @@ Major COLORS used
 #53AB1F — deep green
 #6E5747 — dark brown
 #D5D3C4 — light brown
-
 */
 
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
@@ -193,7 +192,6 @@ p.clear {
     position: absolute;
     left: 0;
     right: 0;
-
 }
 
 .modal_content img {
@@ -391,13 +389,22 @@ p.clear {
 	background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1));
 }
 
-div.scrollfader {
+div.scrollfader_bottom {
 	width: 100%;
 	height: 30px;
 	position: absolute;
 	bottom: 0;
 	z-index: 1001;
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1));
+}
+
+div.scrollfader_top {
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+	background: linear-gradient(to top, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1));
 }
 
 .modules_row li {
@@ -458,6 +465,7 @@ div.scrollfader {
     max-height: auto;
     overflow-y: scroll;
     padding-bottom: 50px;
+    /*position: relative;*/
 }
 
 .triage_list li {
@@ -740,7 +748,7 @@ BEGIN action page borders and header styles
 }
 .action3:before,
 .action3:after {
-    background: #D3AAAC;
+    background: #AD6064;
 }
 .action1:before,
 .action2:before,
@@ -761,14 +769,14 @@ BEGIN action page borders and header styles
     border-right: 9px solid #F4E19D;
 }
 .action3 {
-    border-left: 9px solid #D3AAAC;
-    border-right: 9px solid #D3AAAC;
+    border-left: 9px solid #AD6064;
+    border-right: 9px solid #AD6064;
 }
 .action2 h4 {
     color: #F4E19D;
 }
 .action3 h4 {
-    color: #D3AAAC;
+    color: #B26A6F;
 }
 /*
 END action page borders and header styles
@@ -783,20 +791,13 @@ BEGIN image definitons
     display: block;
     background: no-repeat left top;
 }
-
 .inline {
     /*display: block;*/
     float: left;
 }
-
 ol .illustration, ul .illustration {
     margin: 0;
 }
-
-ol .illustration, ul .illustration {
-    margin: 0;
-}
-
 .illustration_float {
     /*display: block;*/
     float: left;

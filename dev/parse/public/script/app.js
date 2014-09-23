@@ -120,6 +120,7 @@
 
             //lets call modal view event delegation on app start
             App.modalView();
+            App.imageModal();
 
             //lets call the pop manager on application start
             App.back();
@@ -145,8 +146,8 @@
                 $(_carousel).slick(slideOpt);
 
                 if (App.TS_HEIGHT !== 0) {
-                  //  var slick_list = $(id).find('.slick-list');
-                  //  $(slick_list).height(App.TS_HEIGHT);
+                    //  var slick_list = $(id).find('.slick-list');
+                    //  $(slick_list).height(App.TS_HEIGHT);
                 }
             }
         }
@@ -194,7 +195,6 @@
                     var temp = _.template($("script.modal-view").html(), _json);
                     $('body').append(temp);
                     var content = '.modal_content';
-                    console.log($(window).height());
                     window.setTimeout(function () {
                         console.log($(content).height());
                         $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).fadeIn();
@@ -206,6 +206,33 @@
                     });
                 });
             }
+        });
+    };
+
+    App.imageModal = function () {
+
+
+        //look for all class names with the name navigation-view
+        //attach an event to them
+        //extract the data object
+        $(document).delegate('.image-view', App.CURRENT_EVENT, function (e) {
+            e.preventDefault();
+            var _json = {
+                template: $(this).html()
+            };
+            var temp = _.template($("script.image-view").html(), _json);
+            $('body').append(temp);
+            var content = '.modal_content';
+            console.log($(window).height());
+            window.setTimeout(function () {
+                $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).fadeIn();
+            }, 100)
+            $('.modal-close').off().on(App.CURRENT_EVENT, function (e) {
+                $('.modal').fadeOut(function () {
+                    $(this).remove();
+                });
+            });
+
         });
     };
 

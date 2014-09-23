@@ -153,7 +153,7 @@ p.clear {
     text-align: center;
     width: 100%; /* needs to be variable */
     height: 200px; /* needs to be variable */
-    /*  display: table-cell;*/
+    display: table-cell;
     vertical-align: middle;
     border-top: 5px solid #CBC8B5;
     border-bottom: 5px solid #CBC8B5;
@@ -260,11 +260,11 @@ p.clear {
     margin: 0 auto;
 }
 
-.main_menu, .sub_menu, .final_menu {
+/*.main_menu, .sub_menu, .final_menu {
     width: 100%;
     position: absolute;
     bottom: 0;
-}
+}*/
 
 .main_menu li, .sub_menu li, .final_menu li {
     color: #6E5747;
@@ -436,21 +436,36 @@ END menu icons
 
 .lesson_row {
 	width: 1000px;
-	padding: 25px;
+	padding: 25px 0 10px 25px;
 }
 
-.lesson_row h4 {
+.lesson_row h5 {
+	color: #53AB1F;
 	font-size: 1.3em;
 	font-weight: 300;
 }
 
 .modules_row {
-	margin: 15px 0;
+	margin: 15px 0 5px;
+}
+
+.modules_row li {
+	float: left;
+}
+
+.module {
+	width: 130px;
+	height: 70px;
+	color: #6e5747;
+	line-height: 1.4em;
+	padding: 80px 10px 0 ;
+	border: 2px solid #f7f7f4;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-right: 15px;
 }
 
 .pretest {
-	width: 140px;
-	height: 80px;
 	color: #6e5747;
 	line-height: 1.4em;
 	padding: 80px 10px 0 ;
@@ -622,35 +637,6 @@ ul.action_list li {
 }
 
 ol {
-    counter-reset: li; /* Initiate a counter */
-    margin-left: 0; /* Remove the default left margin */
-    padding-left: 0; /* Remove the default left padding */
-    /*list-style-position: inside;*/
-}
-
-ol > li {
-    position: relative; /* Create a positioning context */
-    /*margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers *!/*/
-    /*padding:4px 8px; /* Add some spacing around the content *!/*/
-    /*list-style:none; /* Disable the normal item numbering *!/*/
-}
-
-ol > li:before {
-    content: counter(li); /* Use the counter as content */
-    counter-increment: li; /* Increment the counter by 1 */
-    /* Position and style the number */
-    counter-reset: li;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-ol > li {
-    position: relative;
-}
-
-ol > li:before {
-    content: counter(li);
-    counter-increment: li;
     counter-reset:li; /* Initiate a counter */
     margin-left:0; /* Remove the default left margin */
     padding-left:0; /* Remove the default left padding */
@@ -663,6 +649,7 @@ ol > li {
 ol > li:before {
     content:counter(li); /* Use the counter as content */
     counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
     position: absolute;
     top: 0;
     left: -5px;
@@ -674,6 +661,12 @@ ol > li:before {
     color: #DDDBCF;
     font-size: 1.5em;
     text-align:center;
+}
+
+ol > li.module:before {
+	color: #f2f1ec;
+	font-size: 4.5em;
+	margin-top: 20px;
 }
 
 .toolbox {

@@ -198,7 +198,7 @@
                     window.setTimeout(function () {
                         console.log($(content).height());
                         $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).fadeIn();
-                    }, 100)
+                    }, 160)
                     $('.modal-close').off().on(App.CURRENT_EVENT, function (e) {
                         $('.modal').fadeOut(function () {
                             $(this).remove();

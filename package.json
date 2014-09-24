@@ -1,8 +1,8 @@
 {
   "name": "CHN",
-  "version": "0.1.5",
+  "version": "0.1.10",
   "description": "Community Health Nurse",
-  "author": "Evans Domina Attafuah",
+  "author": "Codebendr / Delak",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^0.4.5"

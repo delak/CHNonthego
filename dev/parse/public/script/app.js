@@ -162,9 +162,16 @@
             var _top = $(top_section);
             var _bottom = $(bottom_section);
             var window_height = $(window).height();
-            var ts_height = (window_height - _bottom.height()) - 4;
+            var _half = window_height * 0.5;
+            if (_bottom.height() >= _half) {
+                _bottom.height(_half);
+                _bottom.css('overflow-y','scroll');
+                _top.height(_half - 10);
+            } else {
+                var ts_height = (window_height - _bottom.height()) - 4;
+                _top.height(ts_height - 6);
+            }
             App.TS_HEIGHT = _top.height();
-            _top.height(ts_height - 6);
         }
     };
 

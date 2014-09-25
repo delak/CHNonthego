@@ -7,80 +7,9 @@ Major COLORS used
 */
 
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
-html {
-    color: #000;
-    background: #FFF
-}
-
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
-    margin: 0;
-    padding: 0
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
-
-fieldset, img {
-    border: 0
-}
-
-address, caption, cite, code, dfn, em, strong, th, var {
-    font-style: normal;
-    font-weight: normal
-}
-
-ol, ul {
-    list-style: none
-}
-
-caption, th {
-    text-align: left
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
-    font-weight: normal
-}
-
-q:before, q:after {
-    content: ''
-}
-
-abbr, acronym {
-    border: 0;
-    font-variant: normal
-}
-
-sup {
-    vertical-align: text-top
-}
-
-sub {
-    vertical-align: text-bottom
-}
-
-input, textarea, select {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit
-}
-
-input, textarea, select {
-    font-size: 100%
-}
-
-legend {
-    color: #000
-}
-
-#yui3-css-stamp.cssreset {
-    display: none
-}
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
 
 html, body {
-	/*width: 100%;*/
     height: 100%;
     font-size: 12pt;
     line-height: 12pt;
@@ -135,6 +64,14 @@ h3 {
     background-color: #f7f7f4;
 }
 
+.charet {
+	width: 15px;
+	height: 13px;
+	display: inline-block;
+	background: url('../assets/icons/right_charet.png') no-repeat right 2px;
+	background-size: 13px 11px;
+}
+
 h4 {
     color: #53AB1F;
     font-size: 1em;
@@ -150,8 +87,8 @@ p.clear {
 
 .top-section, .marquee, .tip {
     text-align: center;
-    width: 100%; /* needs to be variable */
-    height: 200px; /* needs to be variable */
+    width: 100%; 
+    height: 200px; 
     display: table-cell;
     vertical-align: middle;
     border-top: 5px solid #CBC8B5;
@@ -259,12 +196,6 @@ p.clear {
     margin: 0 auto;
 }
 
-/*.main_menu, .sub_menu, .final_menu {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}*/
-
 .main_menu li, .sub_menu li, .final_menu li {
     color: #6E5747;
     font-size: 1.3em;
@@ -273,24 +204,11 @@ p.clear {
     line-height: 65px;
     vertical-align: middle;
     border-bottom: 1px solid #D5D3C4;
-    /*border-top: 1px solid #F7F7F4;*/
     background: linear-gradient(#efeee9, #eae9e1);
 }
 
 .main_menu li:last-child, .sub_menu li:last-child, .final_menu li:last-child {
     border-bottom: none;
-}
-
-.final_menu {
-/*    min-height: 200px;
-    height: 350px;
-    max-height: auto;
-    overflow-y: scroll;
-   	min-height: 200px;
-        height: 350px;
-        max-height: auto;
-        overflow-y: scroll;
-    overflow-y: scroll;*/
 }
 
 .final_menu li {
@@ -466,13 +384,12 @@ div.scrollfader_top {
     max-height: auto;
     overflow-y: scroll;
     padding-bottom: 50px;
-    /*position: relative;*/
 }
 
 .triage_list li {
     color: #6E5747;
     max-width: 90%;
-    width: 370px;
+    width: 320px;
     line-height: 30px;
     margin: 0 auto 10px;
     background-color: #EFEEE9;
@@ -509,20 +426,13 @@ li.triage_no {
     width: 90%;
     height: 60px;
     margin: 0 auto;
-/*    left: 50%;
-    margin-left: -45px;*/
-    /*margin-bottom: 40px;*/
     background: #FFF url('../assets/btn-back.png') no-repeat center top;
-    /*position: absolute;*/
-    /*bottom: 0;*/
     z-index: 1002;
 }
 
 .sticky {
     width: 320px;
-    /*position: absolute;*/
     margin: 15px auto 130px;
-    /*bottom: 100px;*/
     display: block;
 }
 
@@ -558,7 +468,6 @@ legend {
 .modal_link {
     padding: 4px 7px;
     margin: 0 3px;
-    /*position: relative;*/
     display: inline-block;
     background-color: #FFF;
     border: 1px dotted #53AB1F;
@@ -924,5 +833,5 @@ BEGIN glyphicon definitons
     background-size: 13px 12px;
 }
 /*
-END icon definitons
+END glyphicon definitons
 */

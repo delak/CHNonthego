@@ -96,10 +96,10 @@
         FastClick.attach(document.body);
 
         //load the home page
-        require(['script/text!templates.html', 'script/text!home.html'], function (template, home) {
+        require(['script/text!templates.html', 'script/text!home.html'], function (template, homeTemp) {
 
             $(App.EL).append(template);
-            $(App.EL).append(home);
+            $(App.EL).append(homeTemp);
             //after the view successfully loads
             //lets resize it to the current device size
             var home = "#home";
@@ -165,7 +165,7 @@
             var _half = window_height * 0.5;
             if (_bottom.height() >= _half) {
                 _bottom.height(_half);
-                _bottom.css('overflow-y','scroll');
+                _bottom.css('overflow-y', 'scroll');
                 _top.height(_half - 10);
             } else {
                 var ts_height = (window_height - _bottom.height()) - 4;

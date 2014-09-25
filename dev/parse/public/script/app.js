@@ -203,8 +203,11 @@
                     $('body').append(temp);
                     var content = '.modal_content';
                     window.setTimeout(function () {
-                        console.log($(content).height());
-                        $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).show();
+                        if ($(content).height() >= $(window).height()) {
+                            $(content).css('margin-top', "25px").show();
+                        } else {
+                            $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).show();
+                        }
                     }, 160)
                     $('.modal-close').off().on(App.CURRENT_EVENT, function (e) {
                         $('.modal').fadeOut(function () {

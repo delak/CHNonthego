@@ -16,6 +16,7 @@ html, body {
     font-weight: 100;
     font-family: 'Roboto', arial, 'sans-serif';
     -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
     overflow: hidden;
 }
 

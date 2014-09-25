@@ -185,6 +185,7 @@
         $(document).delegate('.modal-view', App.CURRENT_EVENT, function (e) {
 
             e.preventDefault();
+            $('.main-modal').remove();
             var _view = $(this).data('view');
             var _type = $(this).data('type');
 
@@ -201,14 +202,14 @@
                     };
                     var temp = _.template($("script.modal-view").html(), _json);
                     $('body').append(temp);
-                    var content = '.modal_content';
+                    var content = '.modal-content';
                     window.setTimeout(function () {
                         if ($(content).height() >= $(window).height()) {
                             $(content).css('margin-top', "25px").show();
                         } else {
                             $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).show();
                         }
-                    }, 160)
+                    }, 160);
                     $('.modal-close').off().on(App.CURRENT_EVENT, function (e) {
                         $('.modal').fadeOut(function () {
                             $(this).remove();
@@ -227,22 +228,28 @@
         //extract the data object
         $(document).delegate('.image-view', App.CURRENT_EVENT, function (e) {
             e.preventDefault();
+            e.stopImmediatePropagation();
+            $('.image-modal').remove();
             var _json = {
                 template: $(this).html()
             };
             var temp = _.template($("script.image-view").html(), _json);
             $('body').append(temp);
-            var content = '.modal_content';
+            var content = '.image-modal-content';
             console.log($(window).height());
             window.setTimeout(function () {
-                $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).fadeIn();
-            }, 100)
-            $('.modal-close').off().on(App.CURRENT_EVENT, function (e) {
-                $('.modal').fadeOut(function () {
+                if ($(content).height() >= $(window).height()) {
+                    alert('yup');
+                    $(content).css('margin-top', "25px").show();
+                } else {
+                    $(content).css('margin-top', (($(window).height() - $(content).height())) / 2).show();
+                }
+            }, 160);
+            $('.image-modal-close').off().on(App.CURRENT_EVENT, function (e) {
+                $('.image-modal').fadeOut(function () {
                     $(this).remove();
                 });
             });
-
         });
     };
 

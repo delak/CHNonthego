@@ -144,11 +144,10 @@
                     speed: 300
                 };
                 $(_carousel).slick(slideOpt);
-
-                if (App.TS_HEIGHT !== 0) {
-                    //  var slick_list = $(id).find('.slick-list');
-                    //  $(slick_list).height(App.TS_HEIGHT);
-                }
+                var _dots = $(id).find('.slick-dots');
+                var _topSection = $(id).find('.top-section');
+                $(_dots).css('bottom', 10);
+                $(_dots).appendTo(_topSection);
             }
         }
     };

@@ -110,7 +110,7 @@ p.clear {
 }
 
 .carousel{
-    padding-top: 30px;
+    height: 100%;
 }
 
 .bottom-section {
@@ -128,7 +128,6 @@ p.clear {
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 0;
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: 999999999;
@@ -143,6 +142,12 @@ p.clear {
     position: absolute;
     left: 0;
     right: 0;
+    max-height: 575px;
+}
+
+.modal_content .poc {
+	max-height: 575px;
+	overflow: hidden;
 }
 
 .modal_content img {
@@ -396,7 +401,7 @@ div.scrollfader_top {
     height: 400px;
     max-height: auto;
     overflow-y: scroll;
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
 }
 
 .triage_list li {

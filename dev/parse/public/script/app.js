@@ -128,6 +128,33 @@
         });
     };
 
+    //lets check for pages with the class name page-with-back-button
+    //and decide to make the button sticky depending on the height of
+    //the content in page-with-back-button
+    App.detectBackButton = function (id) {
+        //lets find object using id params as the current page context
+        var bb_page = $(id).find('.page-with-back-button');
+        var back_button = $(id).find('.back-button');
+        //check to see if it's a valid jQuery object
+        if (bb_page.length >= 1) {
+            //lets get the height of the back button page
+            var bb_page_height = $(bb_page).height();
+            //lets cache the device height
+            var device_height = $(window).height();
+            // lets calculate the percentage to determine
+            //when to make the back button sticky
+            var perc = (bb_page_height / device_height) * 100;
+            perc = Math.floor(perc);
+
+            console.log('percentage ' + perc);
+            //if perc is less than value make it sticky
+            //ps: play around with percentage to get the right value
+            if (perc <= 80) {
+                $(back_button).addClass('back_btn_sticky');
+            }
+        }
+    };
+
     //lets detect and initial a carousel if a view requests it
     App.carousel = function (id) {
         var _carousel = $(id).find('.carousel');
@@ -192,7 +219,7 @@
             if (typeof _view === 'undefined') {
                 alert("Error Loading Modal");
             } else {
-                if (typeof _type !== 'undefined' && typeof _type === 'image') {
+                if (typeof _type !== 'undefined') {
                     _template = ['script/text!' + _view];
                 }
                 require(_template, function (template) {
@@ -235,7 +262,6 @@
             var temp = _.template($("script.image-view").html(), _json);
             $('body').append(temp);
             var content = '.image-modal-content';
-            console.log($(window).height());
             window.setTimeout(function () {
                 if ($(content).height() >= $(window).height()) {
                     alert('yup');
@@ -269,7 +295,6 @@
             } else {
                 require(['script/text!templates/' + _view], function (template) {
 
-
                     var _json = {
                         template: template,
                         id: temp_id,
@@ -285,6 +310,7 @@
                     App.screenxReverse(_id);
                     App.innerViews(_id);
                     App.carousel(_id);
+                    App.detectBackButton(_id);
 
                 });
             }

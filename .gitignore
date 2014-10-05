@@ -4,7 +4,7 @@ node_modules
 # Grunt intermediate storage
 .grunt
 
-# Compiled & compressed files ( production ready )
+# local development directories
 cloud
 config
 .idea

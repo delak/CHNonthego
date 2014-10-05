@@ -173,8 +173,7 @@
                 $(_carousel).slick(slideOpt);
                 var _dots = $(id).find('.slick-dots');
                 var _topSection = $(id).find('.top-section');
-                $(_dots).css('bottom', 10);
-                $(_dots).appendTo(_topSection);
+                $(_dots).css('bottom', 10).appendTo(_topSection);
             }
         }
     };
@@ -190,8 +189,7 @@
             var window_height = $(window).height();
             var _half = window_height * 0.5;
             if (_bottom.height() >= _half) {
-                _bottom.height(_half);
-                _bottom.css('overflow-y', 'scroll');
+                _bottom.height(_half).css('overflow-y', 'scroll');
                 _top.height(_half - 10);
             } else {
                 var ts_height = (window_height - _bottom.height()) - 4;
@@ -248,12 +246,12 @@
 
     App.imageModal = function () {
 
-
         //look for all class names with the name navigation-view
         //attach an event to them
         //extract the data object
         $(document).delegate('.image-view', App.CURRENT_EVENT, function (e) {
             e.preventDefault();
+            //stop event from bubbling
             e.stopImmediatePropagation();
             $('.image-modal').remove();
             var _json = {
@@ -333,6 +331,7 @@
         });
     };
 
+    //garbage collect all unused views to preserve memory on mobile devices
     App.clearViews = function () {
         if (App.REMOVED_VIEWS.length) {
             _.each(App.REMOVED_VIEWS, function (view) {
